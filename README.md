@@ -5,7 +5,7 @@ Consumers will reach their fitness goals faster when they can easily follow thei
 
 
 ### Technologies-Libraries
-Mongodb/Mongoose - Handlebars - Express - JavaScript - [JQuery](https://code.jquery.com/jquery-3.3.1.slim.min.js) - [Bootstrap](https://getbootstrap.com/) - CSS - HTML
+Mongodb/Mongoose - Handlebars - Node - Express - JavaScript - [JQuery](https://code.jquery.com/jquery-3.3.1.slim.min.js) - [Bootstrap](https://getbootstrap.com/) - CSS - HTML
 
 ### Screenshots
 
