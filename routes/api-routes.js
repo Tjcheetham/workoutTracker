@@ -1,11 +1,19 @@
-var db = require("../models");
+const Workout = require("../models/workout.js");
+const app = require("express").Router();
 
-module.exports = function (app) {
-//-------------------------Routes
-app.get("/", (req,res)=>{
-    
-})
+  // Get all examples
+  app.get("/api/workout", function(req, res) {
+    Workout.findAll({}).then(function(dbWorkouts) {
+      res.json(dbWorkouts);
+    });
+  });
 
+  // Create a new example
+  app.post("/api/workout", function(req, res) {
+      console.log(req.body)
+    Workout.create(req.body).then(function(dbWorkouts) {
+      res.json(dbWorkouts);
+    });
+  });
 
-
-}
+module.exports = app;
