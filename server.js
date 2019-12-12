@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 8080;
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/fitnesstracker";
 
 
 // Sets up the Express app to handle data parsing
@@ -17,7 +18,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //connect to mongodb
-mongoose.connect("mongodb://localhost/fitnesstracker", {
+mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useFindAndModify: false
 });

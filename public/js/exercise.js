@@ -1,4 +1,10 @@
-
+//Attempting to make dropdown view change to selection
+// let selectExType = $(".selectExType");
+// let cardio = $(".cardio");
+// let resistance = $(".resistance");
+// select.onchange = function() {
+//     input.value = select.value;
+// }
 
 $("#complete-btn").on("click", function (event) {
     console.log("click works");
@@ -15,7 +21,7 @@ $("#complete-btn").on("click", function (event) {
     event.preventDefault();
 
     const newWorkout = {
-        exerciseType: "cardio",
+        exerciseType: exerciseType,
         exerciseName: exerciseName,
         weight: parseInt(exerciseWeight),
         sets: parseInt(exerciseSets),
@@ -37,6 +43,10 @@ $("#complete-btn").on("click", function (event) {
         console.log("new workout added");
 
     });
+
+
+  
+
 
     // Make the AJAX request to the API - GETs the JSON data at the queryURL.
     // The data then gets passed as an argument to the updatePage function

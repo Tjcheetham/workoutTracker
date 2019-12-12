@@ -3,7 +3,7 @@ const app = require("express").Router();
 
   // Get all examples
   app.get("/api/workout", function(req, res) {
-    Workout.findAll({}).then(function(dbWorkouts) {
+    Workout.find().then(function(dbWorkouts) {
       res.json(dbWorkouts);
     });
   });
