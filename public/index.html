@@ -19,7 +19,7 @@
                 <h1>Fitness Tracker</h1>
                 <div class="card w-100">
                     <div class="card-body">
-                        <label>Exercise Type:</label>
+                        <!-- <label>Exercise Type:</label> -->
                         <!-- <div class="btn-group dropright btn-lg btn-block">
                             <button class="btn btn-secondary dropdown-toggle selectExType" type="button" id="dropdownMenu2"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -30,16 +30,16 @@
                                 <button class="dropdown-item cardio" type="button">Cardio</button>
                             </div>
                         </div> -->
-                        <br><br>
-                        <form>
-                            <div class="exercise-type">
-                                <label for="type">Exercise Type:</label>
-                                <select name="type" id="dropdownMenu2">
+                        <form id="myForm">
+                            <label for="type" class="fontSize">Exercise Type:</label>
+                            <div class="btn-group dropright btn-lg btn-block exercise-type">
+                                <select name="type" class="dropdown-toggle" id="dropdownMenu2">
                                     <option disabled selected>Select Exercise Type</option>
                                     <option value="Resistance">Resistance</option>
                                     <option value="Cardio">Cardio</option>
                                 </select>
                             </div>
+                            <br><br>
                             <div class="form-group">
                                 <label>Exercise Name:</label>
                                 <input type="text" class="form-control" id="exerciseInput" aria-describedby="emailHelp">
@@ -62,6 +62,8 @@
                             </div>
                             <button type="button" class="btn btn-primary btn-lg btn-block"
                                 id="complete-btn">Complete</button>
+                            <button type="button" class="btn btn-success btn-lg btn-block"
+                                id="view-btn">View Workouts</button>
                         </form>
                     </div>
                 </div>

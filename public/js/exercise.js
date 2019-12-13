@@ -1,10 +1,7 @@
-//Attempting to make dropdown view change to selection
-// let selectExType = $(".selectExType");
-// let cardio = $(".cardio");
-// let resistance = $(".resistance");
-// select.onchange = function() {
-//     input.value = select.value;
-// }
+$("#view-btn").on("click", function(){
+    console.log("Clicked");
+    location.href = "exercise.html"
+});
 
 $("#complete-btn").on("click", function (event) {
     console.log("click works");
@@ -15,6 +12,8 @@ $("#complete-btn").on("click", function (event) {
     const exerciseSets = $("#setsInput").val().trim();
     const exerciseReps = $("#repsInput").val().trim();
     const exerciseDuration = $("#durationInput").val().trim();
+    const form = $("#myForm");
+    const clear = $("#complete-btn");
     // This line allows us to take advantage of the HTML "submit" property
     // This way we can hit enter on the keyboard and it registers the search
     // (in addition to clicks). Prevents the page from reloading on form submit.
@@ -44,8 +43,12 @@ $("#complete-btn").on("click", function (event) {
 
     });
 
-
-  
+    //Attempting to clear the input fields on "Complete" click
+    function clearfield() {
+        form.reset();
+    }
+    
+    clear.addEventListener("click", clearfield, false);
 
 
     // Make the AJAX request to the API - GETs the JSON data at the queryURL.
